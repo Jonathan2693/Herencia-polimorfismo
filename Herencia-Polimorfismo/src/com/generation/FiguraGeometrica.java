@@ -1,6 +1,6 @@
 package com.generation;
 
-public class FiguraGeometrica {
+public abstract class FiguraGeometrica {	/*La clase abstracta sirve para ser una superclase y heredar atributos y metodos, pero no puede crearse objetos de ella*/
 	protected String nombre;
 	protected float alto;
 	protected float ancho;
@@ -9,9 +9,8 @@ public class FiguraGeometrica {
 		this.nombre = nombre;
 	}
 	
-	protected float calcularArea() {
-		return this.alto*this.ancho;
-	}
+	protected abstract float calcularArea();	/*Método abstracto, existe pero no tiene funcionalidad hasta que se defina por las subclases*/
+	protected abstract float calcularPerimetro();
 
 	public String getNombre() {
 		return this.nombre;
